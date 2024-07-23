@@ -1,0 +1,16 @@
+
+
+{% block content %}
+<h2>Welcome to the Custom Admin Dashboard</h2>
+<p>Here you can manage cities, users, and more.</p>
+<div class="container">
+    <h1>City List</h1>
+    <ul>
+        {% for city in cities %}
+            <li>{{ city.name }} - {{ city.population }} - {{ city.country }}</li>
+        {% empty %}
+            <li>No cities found.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
